@@ -2,7 +2,7 @@
 Desenvolver um programa de formação de catálogo com a técnica de Web Scraper, é necessário ser possível buscar qualquer item no site da [UltraFarma](https://www.ultrafarma.com.br/), após definido o produto a ser buscado pelo programa, é necessário que o programa capture dados de todos os card's em todas as páginas. Em cada card de produto são coletados os dados de <b>nome do produto, preço atual do produto, preço antigo do produto, link/url do produto e o código EAN do produto</b>, esse código EAN é encontrado somente quando acessamos o produto, não existe essa informação no card.
 
 <p align="center">
-  <img  src="prints/1site.png"><br>
+  <img  src="prints/1_busca_por_fortificante.png"><br>
   <b>UltraFarma - Busca por Fortificante</b>
 </p>
 
