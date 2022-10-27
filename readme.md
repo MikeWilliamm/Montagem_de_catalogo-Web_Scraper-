@@ -90,5 +90,5 @@ print(f'Arquivo products_{item}.csv Exportado!')
 
 <p align="center">
   <img  src="prints/planilha_final_fortificante.png"><br>
-  <b>Dados finais extraídos buscando por produtos Fortificantes</b>
+  <b>Dados finais - Extraídos buscando pelos produtos denidos como Fortificantes</b>
 </p>
