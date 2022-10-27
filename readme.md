@@ -2,14 +2,15 @@
 Desenvolver um programa de formação de catálogo com a técnica de Web Scraper, é necessário ser possível buscar qualquer item no site da [UltraFarma](https://www.ultrafarma.com.br/), após definido o produto a ser buscado pelo programa, é necessário que o programa capture dados de todos os card's em todas as páginas. Em cada card de produto são coletados os dados de <b>nome do produto, preço atual do produto, preço antigo do produto, link/url do produto e o código EAN do produto</b>, esse código EAN é encontrado somente quando acessamos o produto, não existe essa informação no card.
 
 <p align="center">
-  <img  src="prints/1site.png">
-  <b>UltraFarma - Busca por Fortificante</b>
+  <img  src="prints/1site.png"><br>
+  <b>UltraFarma - Busca por Fortificante</b>
 </p>
 
 <p align="center">
-  <img  src="prints/2_codigo_ean_acessando_produto.png">
-  <b>Código EAN do produto</b>
+  <img  src="prints/2_codigo_ean_acessando_produto.png"><br>
+  <b>Código EAN do produto</b>
 </p>
+
 
 ## Solução proposta
 <b>Stacks:</b> Python (os, requests, BeautifulSoup, pandas)
@@ -31,7 +32,7 @@ except:
     qtd_paginas = 1
 lista_products = []
 ```
-Em  seguida, em um laço de repetição, o programa acessara todas as páginas coletando dados de todos os card's apresentados, esses dados são o <b>nome do produto, preço atual do produto, preço antigo do produto, link/url do produto<br>, após essa primeira captura de dados e com o dado de link de acesso de cada produto obtido, é feito um segundo laço de repetição, nele será feito uma requisição para cada produto unicamente, para que assim possamos capturar o <b>código EAN</b>  de cada produto.
+Em  seguida, em um laço de repetição, o programa acessara todas as páginas coletando dados de todos os card's apresentados, esses dados são o <b>nome do produto, preço atual do produto, preço antigo do produto, link/url do produto</b>, após essa primeira captura de dados e com o dado de link de acesso de cada produto obtido, é feito um segundo laço de repetição, nele será feito uma requisição para cada produto unicamente, para que assim possamos capturar o <b>código EAN</b>  de cada produto.
 ```
 for pagina in range(1,qtd_paginas+1):
     response = requests.get(url_pagina.format(pagina))
@@ -86,7 +87,8 @@ print(f'Arquivo products_{item}.csv Exportado!')
 
 
 <b>Resultado final - Arquivo '.csv':</b>
+
 <p align="center">
-  <img  src="prints/planilha_final_fortificante.png">
-  <b>Dados finais extraidos buscando pelo produto Fortificante</b>
+  <img  src="prints/planilha_final_fortificante.png"><br>
+  <b>Dados finais extraídos buscando por produtos Fortificantes</b>
 </p>
